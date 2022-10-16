@@ -1,4 +1,4 @@
-10:27:32 **** Incremental Build of configuration Debug for project Lab2 ****
+10:36:16 **** Incremental Build of configuration Debug for project Lab2 ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
@@ -34,12 +34,12 @@ arm-none-eabi-objcopy  -O binary  Lab2.elf  "Lab2.bin"
    8108	     44	   1644	   9796	   2644	Lab2.elf
 Finished building: default.size.stdout
  
+Finished building: Lab2.hex
 Finished building: Lab2.bin
 Finished building: Lab2.list
-Finished building: Lab2.hex
  
  
  
 
-10:27:34 Build Finished. 0 errors, 4 warnings. (took 1s.982ms)
+10:36:18 Build Finished. 0 errors, 4 warnings. (took 1s.822ms)
 
