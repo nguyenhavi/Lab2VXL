@@ -1,38 +1,27 @@
-10:43:44 **** Incremental Build of configuration Debug for project Lab2 ****
+11:07:08 **** Incremental Build of configuration Debug for project Lab2 ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:112:4: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
-  112 |    updateClockBuffer(hour, minute);
-      |    ^~~~~~~~~~~~~~~~~
-../Core/Src/main.c: At top level:
-../Core/Src/main.c:242:6: warning: conflicting types for 'updateClockBuffer'
-  242 | void updateClockBuffer(int hour, int minute){
-      |      ^~~~~~~~~~~~~~~~~
-../Core/Src/main.c:112:4: note: previous implicit declaration of 'updateClockBuffer' was here
-  112 |    updateClockBuffer(hour, minute);
-      |    ^~~~~~~~~~~~~~~~~
 ../Core/Src/main.c: In function 'updateClockBuffer':
-../Core/Src/main.c:250:3: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
-  250 |   update7SEG(indexLed);
+../Core/Src/main.c:256:3: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
+  256 |   update7SEG(indexLed);
       |   ^~~~~~~~~~
 ../Core/Src/main.c: At top level:
-../Core/Src/main.c:254:6: warning: conflicting types for 'update7SEG'
-  254 | void update7SEG (int index){
+../Core/Src/main.c:260:6: warning: conflicting types for 'update7SEG'
+  260 | void update7SEG (int index){
       |      ^~~~~~~~~~
-../Core/Src/main.c:250:3: note: previous implicit declaration of 'update7SEG' was here
-  250 |   update7SEG(indexLed);
+../Core/Src/main.c:256:3: note: previous implicit declaration of 'update7SEG' was here
+  256 |   update7SEG(indexLed);
       |   ^~~~~~~~~~
 ../Core/Src/main.c: In function 'update7SEG':
-../Core/Src/main.c:261:3: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
-  261 |   display7SEG(led_buffer[0]);
+../Core/Src/main.c:267:3: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  267 |   display7SEG(led_buffer[0]);
       |   ^~~~~~~~~~~
 ../Core/Src/main.c: At top level:
-../Core/Src/main.c:293:6: warning: conflicting types for 'display7SEG'
-  293 | void display7SEG(int counter){
+../Core/Src/main.c:299:6: warning: conflicting types for 'display7SEG'
+  299 | void display7SEG(int counter){
       |      ^~~~~~~~~~~
-../Core/Src/main.c:261:3: note: previous implicit declaration of 'display7SEG' was here
-  261 |   display7SEG(led_buffer[0]);
+../Core/Src/main.c:267:3: note: previous implicit declaration of 'display7SEG' was here
+  267 |   display7SEG(led_buffer[0]);
       |   ^~~~~~~~~~~
 arm-none-eabi-gcc -o "Lab2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Lab2Official\Lab2\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Lab2.elf
@@ -42,15 +31,15 @@ arm-none-eabi-objdump -h -S  Lab2.elf  > "Lab2.list"
 arm-none-eabi-objcopy  -O ihex  Lab2.elf  "Lab2.hex"
 arm-none-eabi-objcopy  -O binary  Lab2.elf  "Lab2.bin"
    text	   data	    bss	    dec	    hex	filename
-   8260	     20	   1660	   9940	   26d4	Lab2.elf
+   7000	     20	   1652	   8672	   21e0	Lab2.elf
 Finished building: default.size.stdout
  
 Finished building: Lab2.hex
-Finished building: Lab2.list
 Finished building: Lab2.bin
+Finished building: Lab2.list
  
  
  
 
-10:43:46 Build Finished. 0 errors, 6 warnings. (took 2s.12ms)
+11:07:10 Build Finished. 0 errors, 4 warnings. (took 2s.213ms)
 
