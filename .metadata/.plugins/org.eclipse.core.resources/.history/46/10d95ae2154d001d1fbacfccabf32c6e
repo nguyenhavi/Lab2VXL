@@ -100,7 +100,6 @@ int main(void)
   {
 	  if(timer1_flag == 1){
 		  updateLEDMatrix(index);
-		  shift_buffer();
 		  index++;
 		  if(index >= 8){
 			  index = 0;
@@ -283,18 +282,6 @@ void updateLEDMatrix (int index){
 	default:
 		break ;
  	 }
-}
-
-void shift_buffer(){
-	uint8_t temp = matrix_buffer[0];
-	matrix_buffer[0] = matrix_buffer[1];
-	matrix_buffer[1] = matrix_buffer[2];
-	matrix_buffer[2] = matrix_buffer[3];
-	matrix_buffer[3] = matrix_buffer[4];
-	matrix_buffer[4] = matrix_buffer[5];
-	matrix_buffer[5] = matrix_buffer[6];
-	matrix_buffer[6] = matrix_buffer[7];
-	matrix_buffer[7] = temp;
 }
 
 int led_buffer[4] = {0,0,0,0};
