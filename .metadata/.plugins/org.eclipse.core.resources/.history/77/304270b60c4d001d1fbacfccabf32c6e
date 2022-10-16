@@ -271,6 +271,8 @@ void HAL_TIM_PeriodElapsedCallback (TIM_HandleTypeDef *htim){
 	}
 }
 
+
+
 int led_buffer[4] = {0,0,0,0};
 int indexLed = 0;
 void updateClockBuffer(int hour, int minute){
