@@ -246,6 +246,9 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+int counter_led = 100;
+int counter_7seg = 100;
+int hour = 15 , minute = 59 , second = 50;
 void HAL_TIM_PeriodElapsedCallback (TIM_HandleTypeDef *htim){
 	timerRun();
 }
